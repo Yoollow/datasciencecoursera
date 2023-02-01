@@ -1,7 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
+## THE CODE IS COMMENTED!!!!
 
-## Write a short comment describing this function
 ##Function to build a matrix object with several components
 makeCacheMatrix <- function(x = matrix()) {
   
@@ -23,14 +21,14 @@ makeCacheMatrix <- function(x = matrix()) {
 ##function to get cached inverse from the special matrix
 ##or compute it if it is not there
 cacheSolve<- function(x = matrix()){
-  inverse<-x$getinverse()
+  inverse<-x$getinv()
   if(!is.null(inverse)){
     message("getting cached inverse")
     return(inverse)
   }
   matrix<-x$get()
   inverse<-solve(x)
-  x$setinverse(inverse)
+  x$setinv(inverse)
   inverse
   
 }
